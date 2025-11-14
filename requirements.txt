@@ -5,3 +5,13 @@ openai
 chromadb
 sentence-transformers
 openai
+pydantic<2.0
+chromadb==0.4.24
+sentence-transformers
+openai
+numpy<2.0
+pydantic<2.0
+chromadb==0.4.24
+sentence-transformers
+openai
+
