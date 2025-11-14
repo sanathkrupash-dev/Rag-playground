@@ -1,12 +1,16 @@
 
+---
+
+# ✅ **4. ingestion_flow.md (Document/Webpage Ingestion Flow)**
+
 ```md
-# Ingestion Flow
+# Document & Webpage Ingestion Flow
 
 ```mermaid
 flowchart TD
-    A[User uploads file or adds URL] --> B[Extract text]
-    B --> C[Semantic Chunking + Overlap]
-    C --> D[Embedding Model]
-    D --> E[Vector Store]
-    E --> F[Metadata Storage]
-    F --> G[Ingestion Success Response]
+    A[User Uploads File or URL] --> B[Load Raw Text]
+    B --> C[Clean & Normalize Text]
+    C --> D[Chunking (semantic or fixed-size)]
+    D --> E[Embed Chunks]
+    E --> F[Store Embeddings in ChromaDB]
+    F --> G[Ingestion Complete]

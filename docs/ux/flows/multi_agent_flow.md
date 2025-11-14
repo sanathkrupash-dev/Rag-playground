@@ -1,22 +1,21 @@
 
+---
+
+# ✅ **3. multi_agent_flow.md (Multi-Agent Orchestrator Flow)**
+
 ```md
 # Multi-Agent Orchestration Flow
 
 ```mermaid
-flowchart LR
-    U[User Query] --> O[Orchestrator Agent]
+flowchart TD
+    A[User Query] --> B[Orchestrator Agent]
 
-    O --> R(Retrieval Agent)
-    R --> RC[Retrieved Chunks]
-    O --> E(Evaluator Agent)
+    B -->|Ask: Retrieval Needed?| C{Need Retrieval?}
 
-    RC --> E
-    E -->|High Hallucination| Q[Query Rewrite Agent]
-    Q --> R
+    C -->|Yes| D[Retrieval Agent]
+    D --> E[Return Chunks]
+    E --> F[LLM Answer Generator]
+    F --> G[Final Answer]
 
-    E -->|Good Answer| F[Final Answer]
-
-    R --> A[Answer]
-    A --> E
-
-    F --> U
+    C -->|No| H[Direct LLM Answer]
+    H --> G

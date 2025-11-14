@@ -1,16 +1,16 @@
 
+---
+
+# ✅ **2. rag_flow.md (Full RAG pipeline flow)**
+
 ```md
-# RAG (Retrieval-Augmented Generation) Pipeline
+# RAG Pipeline Flow
 
 ```mermaid
-sequenceDiagram
-    participant U as User
-    participant E as Embedder
-    participant DB as Vector DB (Chroma)
-    participant LLM as OpenAI Model
-
-    U->>E: Embed query
-    E->>DB: Vector similarity search
-    DB->>U: Return top-k chunks
-    U->>LLM: Query + retrieved chunks
-    LLM->>U: Grounded answer + citations
+flowchart TD
+    A[User Query] --> B[Embed Query]
+    B --> C[Vector Search in ChromaDB]
+    C --> D[Retrieve Top-k Chunks]
+    D --> E[Construct Prompt]
+    E --> F[LLM Generates Answer]
+    F --> G[Return Answer to User]
