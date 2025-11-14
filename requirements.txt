@@ -2,3 +2,6 @@ python-dotenv
 chromadb
 sentence-transformers
 openai
+chromadb
+sentence-transformers
+openai
