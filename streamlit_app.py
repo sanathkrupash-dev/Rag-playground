@@ -163,6 +163,36 @@ if st.button("Run Agent"):
         st.write("### Agent Answer")
         st.write(agent_answer)
 
+        st.markdown("---")
+st.subheader("🧠 Multi-Agent Mode (Orchestrator + Evaluator)")
+
+multi_q = st.text_input(
+    "Ask the Multi-Agent System",
+    placeholder="e.g., Explain Snowflake warehouses"
+)
+
+if st.button("Run Multi-Agent System"):
+    if not multi_q.strip():
+        st.warning("Please enter a question.")
+    else:
+        with st.spinner("Running multi-agent pipeline..."):
+            from app.orchestrator import orchestrate
+            result = orchestrate(multi_q)
+
+        st.write("### Initial Answer")
+        st.write(result["initial_answer"])
+
+        st.write("### Evaluation")
+        st.json(result["evaluation"])
+
+        if result["used_retry"]:
+            st.write("### Retry Query")
+            st.code(result["retry_query"])
+
+            st.write("### Retry Answer")
+            st.write(result["retry_answer"])
+
+
 
 from app.ingest_utils import semantic_chunk
 
