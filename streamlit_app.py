@@ -144,6 +144,26 @@ if st.button("Run Evaluation"):
 st.markdown("---")
 st.subheader("📦 Chunk Explorer")
 
+st.markdown("---")
+st.subheader("🤖 Agent Mode (with tool calling)")
+
+agent_query = st.text_input(
+    "Ask the Agent",
+    placeholder="e.g., Explain Snowflake warehouses"
+)
+
+if st.button("Run Agent"):
+    if not agent_query.strip():
+        st.warning("Please enter a question.")
+    else:
+        with st.spinner("Running agent..."):
+            from app.agent import run_agent
+            agent_answer = run_agent(agent_query)
+
+        st.write("### Agent Answer")
+        st.write(agent_answer)
+
+
 from app.ingest_utils import semantic_chunk
 
 debug_text = st.text_area(
