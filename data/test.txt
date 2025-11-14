@@ -1,0 +1,3 @@
+Snowflake is a cloud data platform known for scalability,
+separation of storage and compute, and secure data sharing.
+It allows teams to build analytics and AI workloads efficiently.
