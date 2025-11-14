@@ -1,9 +1,3 @@
-
----
-
-# ✅ **4. ingestion_flow.md (Document/Webpage Ingestion Flow)**
-
-
 # Document & Webpage Ingestion Flow
 
 ```mermaid
@@ -14,3 +8,4 @@ flowchart TD
     D --> E[Embed Chunks]
     E --> F[Store Embeddings in ChromaDB]
     F --> G[Ingestion Complete]
+```

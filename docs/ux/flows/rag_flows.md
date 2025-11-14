@@ -1,9 +1,3 @@
-
----
-
-# ✅ **2. rag_flow.md (Full RAG pipeline flow)**
-
-```md
 # RAG Pipeline Flow
 
 ```mermaid
@@ -14,3 +8,4 @@ flowchart TD
     D --> E[Construct Prompt]
     E --> F[LLM Generates Answer]
     F --> G[Return Answer to User]
+```
