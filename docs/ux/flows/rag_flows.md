@@ -1,6 +1,4 @@
 
-Paste:
-
 ```md
 # RAG (Retrieval-Augmented Generation) Pipeline
 

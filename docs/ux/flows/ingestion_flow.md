@@ -1,6 +1,4 @@
 
-Paste:
-
 ```md
 # Ingestion Flow
 

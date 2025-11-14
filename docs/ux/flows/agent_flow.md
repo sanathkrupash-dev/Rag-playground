@@ -1,6 +1,4 @@
 
-Paste:
-
 ```md
 # Retrieval Agent Flow
 

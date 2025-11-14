@@ -1,5 +1,4 @@
 
-Paste:
 
 ```md
 # UI Wireframe — Snowflake RAG + Agent Assistant

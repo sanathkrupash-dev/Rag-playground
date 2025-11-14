@@ -1,6 +1,4 @@
 
-Paste:
-
 ```md
 # Multi-Agent Orchestration Flow
 
