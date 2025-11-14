@@ -101,12 +101,13 @@ def _llm_answer(query: str, context: str) -> str:
         {
             "role": "system",
             "content": (
-                "You are an assistant helping a data platform product manager "
-                "understand a Snowflake-like analytics platform. "
-                "Answer using the provided context as your primary source. "
-                "Quote or summarize it directly when possible. "
-                "If the context is clearly unrelated or completely missing, "
-                "say you don't know. Otherwise, give your best concise answer."
+               "You are an assistant helping a data platform product manager "
+            "understand a Snowflake-like analytics platform. "
+            "Use the provided context as your primary source of truth. "
+            "Quote or summarize it directly when possible. "
+            "If the context is clearly unrelated or completely missing, "
+            "say you don't know. Otherwise, give your best concise answer, "
+            "and you may use your own knowledge to fill in small gaps."
             ),
         },
         {
